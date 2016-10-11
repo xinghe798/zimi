@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>mi</title>	
+</head>
+<body>
+	
+</body>
+<script>
+	function mi(m,n){
+		var arr=[];
+		for(var i=m;i<=n;i++){
+			var m=String(i);
+			var shuzu=m.split("");
+			var he=0;
+			for(var j=0;j<shuzu.length;j++){
+				var ge=Math.pow(parseInt(shuzu[j]),shuzu.length);
+				he+=ge;
+			}
+			if(he==i){
+				arr.push(he);
+			}
+		}
+		return arr;
+	}
+	var a=prompt("请输入要寻找自幂数的范围下限：");
+	var b=prompt("请输入要寻找自幂数的范围上限：");
+	document.write(a+"到"+b+"之间的自幂数有：</br>");
+	document.write(mi(a,b));
+
+	</script>
+</html>
